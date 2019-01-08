@@ -20,7 +20,7 @@ Server.default.waitForBoot({
 		c = Buffer.sendCollection(s, Env.sine().discretize);
 		SynthDef(\grain, {|amp = 0.3, trigFreq = 100, grainDur = 0.1,  filePos = 0.5, rate = 1, pan = 0, phasorRate = 1, gate = 1 , bufnum = 1|
 			var src, env, envgen;
-			env = Env.asr(attackTime: 10, releaseTime: 10);
+			env = Env.asr(attackTime: 10, releaseTime: 15);
 			envgen = EnvGen.kr(env, gate: gate, doneAction: 2);
 			src = GrainBuf.ar(1, Impulse.kr(trigFreq), SinOsc.kr(0.01)*grainDur, bufnum, rate, Phasor.kr(rate: phasorRate), pan, c.bufnum)!2;
 			Out.ar(0, src * amp * envgen);
