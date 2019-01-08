@@ -26,8 +26,6 @@ COPY darkice.cfg /etc/darkice.cfg
 
 COPY startup.scd /root/.config/SuperCollider/startup.scd
 COPY radio.sc /radio.sc
-COPY randomNoise.py /randomNoise.py
-COPY noise.wav /var/log/sc/noise.wav
 
 COPY Procfile Procfile
 
