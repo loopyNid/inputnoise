@@ -24,7 +24,7 @@ from pythonosc import udp_client
 
 # random video id
 count = 1
-API_KEY = 'AIzaSyDjFs6JULeueFkFPUZli9K5kDjsg2VN4Rk'
+API_KEY = ''
 while(True):
   randomYt = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(3))
   urlData = "https://www.googleapis.com/youtube/v3/search?key={}&maxResults={}&part=snippet&type=video&q={}".format(API_KEY,count,randomYt)
